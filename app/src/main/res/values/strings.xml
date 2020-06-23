@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">fortune cookies</string>
+    <string name="bt_action">Fortune telling</string>
+    <string name="contents1">Everything goes well</string>
+    <string name="contents2">You will get unexpected income.</string>
+    <string name="contents3">You are full of motivation</string>
+    <string name="contents4">Get fortune, but be careful not to waste money</string>
+    <string name="contents5">Be cautious about love</string>
+    <string name="contents6">Physical condition is neither good nor bad</string>
+    <string name="contents7">There may be good things to do as a volunteer</string>
+    <string name="contents8">You need patience</string>
+    <string name="contents9">Be careful of lack of sleep</string>
+
+</resources>
