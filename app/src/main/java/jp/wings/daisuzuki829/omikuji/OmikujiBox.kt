@@ -1,5 +1,6 @@
-package jp.wings.nikkeibp.omikuji
+package jp.wings.daisuzuki829.omikuji
 
+import android.hardware.SensorEvent
 import android.view.animation.Animation
 import android.view.animation.AnimationSet
 import android.view.animation.RotateAnimation
@@ -9,6 +10,10 @@ import kotlinx.android.synthetic.main.omikuji.*
 import java.util.*
 
 class OmikujiBox: Animation.AnimationListener {
+
+    var beforeTime = 0L
+    var beforeValue = 0F
+
     lateinit var omikujiView: ImageView
     var finish = false
 
@@ -49,5 +54,23 @@ class OmikujiBox: Animation.AnimationListener {
 
     override fun onAnimationStart(animation: Animation?) {
     }
+
+    fun chkShake(event: SensorEvent?): Boolean {
+        val nowtime = System.currentTimeMillis()
+        val difftime: Long = nowtime - beforeTime
+        val nowvalue: Float = (event?.values?.get(0) ?: 0F) + (event?.values?.get(1) ?: 0F)
+
+        if (1500 < difftime) {
+            val speed = Math.abs(nowvalue - beforeValue) / difftime * 10000
+            beforeTime = nowtime
+            beforeValue = nowvalue
+
+            if (50 < speed) {
+                return true
+            }
+        }
+        return false
+    }
+
 
 }

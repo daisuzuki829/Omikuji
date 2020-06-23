@@ -1,4 +1,4 @@
-package jp.wings.nikkeibp.omikuji
+package jp.wings.daisuzuki829.omikuji
 
 import org.junit.Test
 

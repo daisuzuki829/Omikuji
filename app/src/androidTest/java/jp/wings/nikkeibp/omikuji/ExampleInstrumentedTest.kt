@@ -1,4 +1,4 @@
-package jp.wings.nikkeibp.omikuji
+package jp.wings.daisuzuki829.omikuji
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("jp.wings.nikkeibp.omikuji", appContext.packageName)
+        assertEquals("jp.wings.daisuzuki829.omikuji", appContext.packageName)
     }
 }
